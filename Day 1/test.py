@@ -12,3 +12,8 @@ print(orange+apple)
 print(orange-apple)
 print(orange*apple)
 print(orange/apple)
+print(orange%apple)
+print(orange//apple)
+
+print(2**2)
+print(3**3)
