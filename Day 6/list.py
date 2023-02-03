@@ -13,9 +13,47 @@
           ㄴ*맨 마지막이 사라짐
  -특징3):선택한 값을 지우고 싶을때 remove 사용
  -특징4):정렬(오름차순)할 때 sort 사용
- -특징5):정렬(내림차순)할 때 reverse 사용
+ -특징5):정렬(내림차순)할 때 sort먼저, 다음에reverse 사용 (reverse는 완전히 반대로 ex)4135면 5314)
+ -특징6):"+"를 이용해 리스트를 합칠 수 있다
+            ex) a=[1], b=[2,3], c=["가","나"]
+            a+b+c => [1,2,3,"가","나"]
+            단, -,*,/ 는 에러남
+ -특징7):len을 이용해서 요소들의 길이를 알 수 있음
+            ex) a=[1,2,3]
+                len(a) => 3
+ -특징8):리스트를 추가 할 떄는 extend 메소드를 사용("+"와 유사함)
+            ex) a=[1,2,3]
+                b=["가","나"]
+                a.extend(b)
+                print(a) 
+ -특징9):리스트를 배우고 싶을떄 clear사용
+            ex) a=[1,2,3]
+                a.clear()
+                print(a)
+ -특징10):위치를 선택해서 추가할때 insert 메소드 사용
+            ex) a=[1,2,3]
+                a.insert(100,1)
+                print(a)
+ -특징11):값을 이용해 위치를 알고 싶을떄 index 메소드 사용
+            ex) a=[1,2,3]
+            print(a.index(2))
+            print(a.index(3))
 
-- 특징1 예시)
+            b=["가","나","다","나"] (중복은 앞에만 출력)
+            print(b.index("나"))
+ -특징12):값이 몇개있는지 확인 할 떄는 count 메소드 사용
+            ex) a=["가","나","다","나"]
+ -특징13):for와 리스트를 같이 쓸수있음
+            ex) for만 쓸때: for i in range(1,5):
+                              print(i)
+                같이 쓸때:a=[1,2,3,4] 
+                          for i in a:
+                            print(i)
+
+                         b=["서현","하율","유래"]
+                        for i in b:
+                          print(i) 
+- 특징1 예시
 a="하율"
 b=10
 c=["사과","배","바나나"]
@@ -61,7 +99,6 @@ for i in range(10,21):
     list.append(i)
 list.reverse()
 print(list)
-'''
 
 # 1
 lis=[]
@@ -82,3 +119,26 @@ print(list)
 
 # 3
 print(lis[0]*list[-1])
+
+a=[1,2,3]
+a.insert(1,100)
+print(a)
+'''
+#1
+lis=[]
+for i in range(1,21):
+  if i%3==0:
+    lis.append(i)
+lis.reverse()
+print(lis)
+
+#2
+def 구구단(a):
+  list=[]
+  for i in range(1,10):
+    list.append(a*i)
+  print(list)
+
+구구단(8)
+구구단(9)
+
